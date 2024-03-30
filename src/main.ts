@@ -6,8 +6,8 @@ const createWindow = () => {
     height: 600,
     backgroundColor: 'white',
     webPreferences: {
-      nodeIntegration: true
-    }
+      nodeIntegration: true,
+    },
   });
 
   win.loadFile('./assets/index.html');
@@ -22,10 +22,10 @@ const main = async () => {
     }
   });
   app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0 ) {
+    if (BrowserWindow.getAllWindows().length === 0) {
       createWindow();
     }
-  })
+  });
 };
 
 main();
