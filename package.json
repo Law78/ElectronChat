@@ -1,0 +1,20 @@
+{
+  "name": "electronchat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copyAssets": "node -e \"require('fs').cpSync('./assets', './build/assets', {recursive: true});\"",
+    "compile": "tsc",
+    "build": "concurrently \"npm:compile\" \"npm:copyAssets\"",
+    "start": "electron ./build/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^29.1.6",
+    "typescript": "^5.4.3"
+  }
+}
