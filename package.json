@@ -7,6 +7,7 @@
     "copyAssets": "node -e \"require('fs').cpSync('./assets', './build/assets', {recursive: true});\"",
     "compile": "tsc",
     "build": "concurrently \"npm:compile\" \"npm:copyAssets\"",
+    "prestart": "npm run compile",
     "start": "electron ./build/main.js"
   },
   "keywords": [],

@@ -12,4 +12,9 @@ const createWindow = () => {
   win.loadFile("./assets/index.html");
 };
 
-app.whenReady().then(createWindow);
+const main = async () => {
+  await app.whenReady();
+  createWindow();
+};
+
+main();
