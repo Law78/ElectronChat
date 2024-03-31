@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, Notification } from 'electron';
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -16,6 +16,12 @@ const createWindow = () => {
 const main = async () => {
   await app.whenReady();
   createWindow();
+  const notification = new Notification({
+    title: 'Hello world!',
+    body: 'App avviata!',
+  });
+  notification.show();
+
   app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
       app.quit();
