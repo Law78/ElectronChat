@@ -13,7 +13,7 @@ Un piccolo progetto con Electron
 
 Per avviare fai:
 
-```
+```shell
 npm run build
 npm start
 ```
