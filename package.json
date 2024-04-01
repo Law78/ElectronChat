@@ -12,9 +12,9 @@
     "lint:fix": "eslint ./src --ext \".js,.jsx,.ts,.tsx\" --fix",
     "prestart": "npm run compile",
     "start": "electron ./build/main.js",
-    "watch": "webpack --watch",
+    "watch": "webpack --watch --no-devtool",
     "webpack:start": "webpack serve --open",
-    "webpack:build": "webpack --mode production"
+    "webpack:build": "webpack --mode development --no-devtool"
   },
   "keywords": [],
   "author": "",
