@@ -1,10 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 
 module.exports = {
   entry: './src/react/index.tsx',
-  mode: 'development',
+  mode: 'production',
   target: 'electron-renderer',
   devtool: false, // using SourceMapDevToolPlugin instead
   output: {
@@ -26,10 +25,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './static/index.html',
-    }),
-    new webpack.SourceMapDevToolPlugin({
-      filename: '[name].map',
-      exclude: ['vendor.js'],
     }),
   ],
 };
