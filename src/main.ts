@@ -7,6 +7,7 @@ const createWindow = () => {
     backgroundColor: 'white',
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: true,
     },
   });
 
