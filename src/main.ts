@@ -11,7 +11,7 @@ const createWindow = () => {
     },
   });
 
-  win.loadFile('./assets/index.html');
+  win.loadFile('./index.html');
   if (process.env.DEBUG) win.webContents.openDevTools();
 };
 
