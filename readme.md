@@ -21,6 +21,16 @@ npm run build
 npm start
 ```
 
+Per il watch in dev, apri 2 terminali:
+
+```shell
+npm run webpack:watch
+```
+
+```shell
+npm start
+```
+
 ## Errori noti
 
 - [36818:0401/102319.493400:ERROR:CONSOLE(1)] "Request Autofill.enable failed. {"code":-32601,"message":"'Autofill.enable' wasn't found"}", source: devtools://devtools/bundled/core/protocol_client/protocol_client.js (1)
